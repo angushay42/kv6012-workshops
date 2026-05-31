@@ -1,0 +1,153 @@
+/* =========================================
+   City Tour - style.css
+   ========================================= */
+
+/* --- CSS Variables --- */
+:root {
+  --colour-bg: #0f1923;
+  --colour-surface: #1a2737;
+  --colour-accent: #e8a045;
+  --colour-accent-light: #f0bc78;
+  --colour-text: #e8e8e0;
+  --colour-text-muted: #8a9ab0;
+  --colour-border: #2a3a4f;
+  --font-heading: 'Georgia', serif;
+  --font-body: 'Trebuchet MS', sans-serif;
+  --max-width: 1000px;
+  --radius: 6px;
+}
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--colour-bg);
+  color: var(--colour-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Layout Container --- */
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* --- Header --- */
+header {
+  background-color: var(--colour-surface);
+  border-bottom: 2px solid var(--colour-accent);
+  padding: 1.5rem 0;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+header h1 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--colour-accent);
+  letter-spacing: 0.05em;
+}
+
+/* --- Navigation --- */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--colour-text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: color 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--colour-accent);
+  outline: none;
+}
+
+/* --- Main Content --- */
+main {
+  flex: 1;
+  padding: 3rem 0;
+}
+
+/* --- Intro Section --- */
+#intro {
+  margin-bottom: 2.5rem;
+}
+
+#intro p {
+  max-width: 700px;
+  color: var(--colour-text-muted);
+  font-size: 1.05rem;
+}
+
+/* --- Section Headings --- */
+section {
+  margin-bottom: 2.5rem;
+}
+
+section h2 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--colour-accent-light);
+  border-left: 3px solid var(--colour-accent);
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* --- Weather Section --- */
+#weather {
+  background-color: var(--colour-surface);
+  border: 1px solid var(--colour-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+#weather-data {
+  color: var(--colour-text-muted);
+  font-style: italic;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: var(--colour-surface);
+  border-top: 1px solid var(--colour-border);
+  padding: 1.25rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--colour-text-muted);
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+}
